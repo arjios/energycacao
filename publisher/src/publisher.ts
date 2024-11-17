@@ -15,7 +15,7 @@ client.on('connect', async () => {
     // Enviando dados a cada 5 segundos
     setInterval(async () => {
         const data = {
-            temperatura: (Math.random() * (200 - 0)).toFixed(3),
+            temperatura: (Math.random() * ((110 - 90) + 90)).toFixed(3),
             umidade: (Math.random() * ( 100 - 5) + 5).toFixed(3),
             timestamp: new Date()
         };
