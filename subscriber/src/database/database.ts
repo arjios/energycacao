@@ -20,6 +20,7 @@ const initializeDb = async () => {
             timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
         )
     `);
+    return db
 };
 
-export { openDb, initializeDb };
+export { initializeDb };
