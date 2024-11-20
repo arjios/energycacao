@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev src/publisher.ts"
+    "start": "ts-node-dev src/publisherTEMP.ts",
+    "startrpm": "ts-node-dev src/publisherRPM.ts"
   },
   "keywords": [],
   "author": "",

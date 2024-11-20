@@ -4,7 +4,7 @@ import { initializeDb } from '../database/database';
 
 // Configurações do MQTT
 const brokerUrl = 'mqtt://broker.hivemq.com:1883';
-const topic = 'dados/sensores';
+const topic = 'dados/motorRPM01';
 const client = mqtt.connect(brokerUrl);
 
 client.on('connect', async () => {
@@ -18,16 +18,16 @@ client.on('connect', async () => {
 
 client.on('message', async (topic, message) => {
     const data = JSON.parse(message.toString());
-    const query = 'INSERT INTO sensor_data (temperatura, umidade, timestamp) VALUES (?, ?, ?)'
+    const query = 'INSERT INTO sensor_data (nome, medida, unidade, timestamp) VALUES (?, ?, ?, ?)'
     console.log('Inicializando Database...')
     console.log('Database inicializado.')
     console.log(`Mensagem recebida no tópico: ${topic} `);
+    console.log(`Equipamento ...............: ${data.nome} `);
+    console.log(`Rotações recebida .........: ${data.medida} ${data.unidade}`);
     console.log(`Mensagem recebida em.......: ${data.timestamp}`);
-    console.log(`Temperatura recebida.......: ${data.temperatura}`);
-    console.log(`Umidade recebida...........: ${data.umidade}`);
     console.log(`                                         `);
     const db = await initializeDb()
-    db.run(query, data.temperatura, data.umidade, data.timestamp),
+    db.run(query, data.nome, data.medida, data.unidade, data.timestamp),
     console.log('Dados gravados:', data);
 });
 

@@ -7,7 +7,7 @@
       "skipLibCheck": true,
       "outDir": "./dist"
     },
-    "include": ["src/**/*.ts", "../subscriber/src/subscriber/subscriber.ts", "../subscriber/src/subscriber/database.ts"],
+    "include": ["src/**/*.ts", "../subscriber/src/subscriber/subscriberTemp.ts", "../subscriber/src/subscriber/database.ts"],
     "exclude": ["node_modules"]
   }
   

@@ -10,8 +10,9 @@ client.on('connect', async () => {
     // Enviando dados a cada 5 segundos
     setInterval(async () => {
         const data = {
-            temperatura: (Math.random() * ((110 - 90) + 90)).toFixed(3),
-            umidade: (Math.random() * ( 100 - 5) + 5).toFixed(3),
+            nome: "Motor01",
+            medida: (Math.random() * ((110 - 0) + 0)).toFixed(3),
+            unidade: "C",
             timestamp: new Date()
         };
         client.publish(topic, JSON.stringify(data));
