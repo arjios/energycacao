@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev src/subscriber/subscriberTemp.ts",
-    "startrpm": "ts-node-dev src/subscriber/subscriberRPM.ts"
+    "start": "ts-node-dev src/subscriber/subscriberSensor.ts"
   },
   "keywords": [],
   "author": "",

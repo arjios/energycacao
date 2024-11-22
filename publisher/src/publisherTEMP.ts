@@ -2,7 +2,7 @@ import mqtt from 'mqtt';
 
 // Servidor MQTT
 const brokerUrl = 'mqtt://broker.hivemq.com:1883'
-const topic = 'dados/sensores'
+const topic = 'dados/area01'
 const client = mqtt.connect(brokerUrl)
 
 client.on('connect', async () => {
