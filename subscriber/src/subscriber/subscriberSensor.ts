@@ -18,7 +18,7 @@ client.on('connect', async () => {
 
 client.on('message', async (topic, message) => {
     const data = JSON.parse(message.toString());
-    const query = 'INSERT INTO sensor_data (nome, medida, unidade, timestamp) VALUES (?, ?, ?, ?)'
+    const query = 'INSERT INTO sensor_data (topico, nome, medida, unidade, timestamp) VALUES (?, ?, ?, ?, ?)'
     console.log('Inicializando Database...')
     console.log('Database inicializado.')
     console.log(`Mensagem recebida no tópico: ${topic}`);
@@ -27,7 +27,7 @@ client.on('message', async (topic, message) => {
     console.log(`Mensagem recebida em.......: ${data.timestamp}`);
     console.log(`                                         `);
     const db = await initializeDb()
-    db.run(query, data.nome, data.medida, data.unidade, data.timestamp),
+    db.run(query, data.topico, data.nome, data.medida, data.unidade, data.timestamp),
     console.log('Dados gravados:', data);
 });
 

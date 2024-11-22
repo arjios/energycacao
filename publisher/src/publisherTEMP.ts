@@ -10,6 +10,7 @@ client.on('connect', async () => {
     // Enviando dados a cada 5 segundos
     setInterval(async () => {
         const data = {
+            topico: topic,
             nome: "Motor01",
             medida: (Math.random() * ((110 - 0) + 0)).toFixed(3),
             unidade: "C",

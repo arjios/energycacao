@@ -15,6 +15,7 @@ const initializeDb = async () => {
     await db.exec(`
         CREATE TABLE IF NOT EXISTS sensor_data (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            topico TEXT,
             nome TEXT,
             medida REAL,
             unidade CHAR(10),
