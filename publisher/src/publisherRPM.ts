@@ -7,7 +7,7 @@ const client = mqtt.connect(brokerUrl)
 
 client.on('connect', async () => {
 
-    // Enviando dados a cada 5 segundos
+    // Simulando e enviando dados a cada 5 segundos
     setInterval(async () => {
         const data = {
             topico: topic,
