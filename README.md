@@ -16,5 +16,10 @@ por 4 motores. Neste prototipo utilizamos 2 sensores.
                 grava em banco de dados, repassando também para a tela.
 
 
+### Considerações
+
+- O prototipo pode ser configurado para atender diversos sensores e modos de operação
+na coleta de dados, como temporização e medições desejadas na simulação, servindo para
+teste do Broker e subscriber 
 
 
