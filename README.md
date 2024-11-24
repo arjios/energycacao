@@ -20,9 +20,19 @@ por 4 motores. Neste prototipo utilizamos 2 sensores.
 
 - O prototipo pode ser configurado para atender diversos sensores e modos de operação
 na coleta de dados, como temporização e medições desejadas na simulação, servindo para
-teste do Broker e subscriber
+teste do Broker e subscriber.
 
-- Essas informações que vão para o console podem ser enviadas para tela de um dispositivo
-movel, microcomputador, etc
+- Por estar utilizando um Broker como HIVEMQ conhecido pelo desempenho, elasticidade e
+um balanciamento de carga considerado robusto, a escalabilidade é asegurada, quanto a 
+flexibilidade obtemos uma boa otimização, pode-se utilizar outro Broker, diferentes 
+sensores e trabalha com diversostipos de dados, o React Native pode ser utilizado em
+diversas plataformas.
+
+- O projeto utiliza várias tecnologias modernas e práticas recomendadas no desenvolvimento
+de sistemas IoT. A utilização de MQTT, TypeScript, React Native, e um broker escalável como
+o HiveMQ cria uma solução capaz de se adaptar e crescer conforme as necessidades.
+
+- Este protótipo para desenvolvimentos iniciais em sistemas IoT segue bem funcional e util. 
+A capacidade de publicar e receber dados em tempo real, mais a facilidade de configuração e manutenção, é uma excelente base para futuros desenvolvimentos.
 
 
