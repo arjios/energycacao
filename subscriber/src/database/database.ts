@@ -4,7 +4,7 @@ import { open } from 'sqlite';
 // Abrir conexão com o banco de dados
 const openDb = async () => {
     return await open({
-        filename: 'c:/ws-cepedi/energycacao/publisher/database/sensores.db',
+        filename: 'c:/ws-cepedi/energycacao/data/sensores.db',
         driver: sql.Database
     });
 };

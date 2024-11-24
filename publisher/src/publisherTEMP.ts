@@ -2,8 +2,10 @@ import mqtt from 'mqtt';
 
 // Servidor MQTT
 const brokerUrl = 'mqtt://broker.hivemq.com:1883'
-const topic = 'dados/area01'
+const topic = 'dados/moagem'
 const client = mqtt.connect(brokerUrl)
+const max = 100
+const min = 0
 
 client.on('connect', async () => {
 
@@ -11,8 +13,8 @@ client.on('connect', async () => {
     setInterval(async () => {
         const data = {
             topico: topic,
-            nome: "Motor01",
-            medida: (Math.random() * ((110 - 0) + 0)).toFixed(3),
+            nome: "FluxoNibsTemp",
+            medida: Math.floor(Math.random() * ((max - min) + min)),
             unidade: "C",
             timestamp: new Date()
         };
